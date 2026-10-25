@@ -8,6 +8,7 @@ const DATA = {
   facts: [["Degree","B.Tech CSE (AIML)"],["Year","3rd year"],["Focus","Web dev, ML, DSA"],["Looking for","Internship"]],
   skills: {
     "Frontend": ["HTML","CSS","JavaScript"],
+    "Backend": ["Node.js","Express"],
     "AI / ML": ["TensorFlow.js","Teachable Machine","Python"],
     "Languages": ["C++","JavaScript","Python"],
     "Tools": ["Git","GitHub","Vercel"]
