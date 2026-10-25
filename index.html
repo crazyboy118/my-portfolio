@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><a href="#top" class="logo" id="logo"></a>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a><button id="theme">Theme</button></div></div></nav>
+
+<main class="wrap" id="top">
+<section class="hero">
+<p class="hi">Hi, I'm</p>
+<h1 id="name"></h1>
+<div class="role"><span id="typed"></span><span class="cursor"></span></div>
+<div class="cta"><a class="btn main" href="#projects">View projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</section>
+
+<section id="about" class="rv"><h2>About</h2>
+<div class="about"><div id="bio"></div><div class="facts" id="facts"></div></div></section>
+
+<section id="skills" class="rv"><h2>Skills</h2><div class="skills" id="skillGrid"></div></section>
+
+<section id="projects" class="rv"><h2>Projects</h2><div class="filters" id="filters"></div><div class="grid" id="projGrid"></div></section>
+
+<section id="contact" class="contact rv"><h2>Contact</h2>
+<h1 style="font-size:clamp(28px,5vw,44px)">Let's build something.</h1><p id="contactText"></p>
+<a class="btn main" id="mail" href="#">Say hello</a><p class="mailtext" id="mailText"></p><div class="socials" id="socials"></div></section>
+</main>
+<footer>Built with HTML, CSS &amp; JS by <span id="foot"></span></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
