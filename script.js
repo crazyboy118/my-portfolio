@@ -3,16 +3,23 @@ const DATA = {
   roles: ["Full Stack Developer", "AI/ML Enthusiast", "Problem Solver"],
   bio: [
     "I'm a third-year B.Tech CSE student specialising in AI & ML. I enjoy turning ideas into working products, from clean front-ends to models running right in the browser.",
-    "I've built four projects so far and I'm now going deeper into full stack development and DSA, aiming for a product-based company."
+    "I've built four projects so far and I'm currently working as a full stack web developer intern at Ricoz Innovation, while going deeper into DSA."
   ],
-  facts: [["Degree","B.Tech CSE (AIML)"],["Year","3rd year"],["Focus","Web dev, ML, DSA"],["Looking for","Internship"]],
+  facts: [["Degree","B.Tech CSE (AIML)"],["Year","3rd year"],["Focus","Web dev, ML, DSA"],["Now","Full Stack Intern"]],
   skills: {
-    "Frontend": ["HTML","CSS","JavaScript"],
+    "Frontend": ["HTML","CSS","JavaScript","React"],
     "Backend": ["Node.js","Express"],
+    "Databases": ["MongoDB","SQL"],
     "AI / ML": ["TensorFlow.js","Teachable Machine","Python"],
     "Languages": ["C++","JavaScript","Python"],
-    "Tools": ["Git","GitHub","Vercel"]
+    "Tools": ["Git","GitHub","Vercel"],
+    "Learning": ["Docker","Kubernetes"]
   },
+  experience: [
+    {role:"Full Stack Web Developer Intern", org:"Ricoz Innovation (FirstRicoz Pvt. Ltd.)", when:"Nov 2026 – Mar 2027", mode:"Full-time · Remote",
+     points:["Building and shipping features across the front end and back end of company projects as part of a remote team.","Working with the MERN stack: React on the front end, Node.js and Express APIs, MongoDB for data.","Taking part in regular performance reviews and acting on feedback to raise code quality and meet timelines."],
+     tags:["React","Node.js","Express","MongoDB","SQL","Git"]}
+  ],
   projects: [
     {title:"PlantSafe AI", type:"AI", desc:"Upload a leaf photo, pick a crop and get a disease prediction. Six Teachable Machine models run in the browser with TensorFlow.js, plus a disease library, symptom quiz and care checklist.", live:"https://plantsafe-ai.vercel.app/", code:"https://github.com/crazyboy118/Plantsafe-AI.git"},
     {title:"Lunova", type:"Web", desc:"A personalised photography website with a clean, image-first layout.", live:"https://lunova-photography.vercel.app/", code:"https://github.com/crazyboy118/lunova-photography.git"},
@@ -34,6 +41,8 @@ $("skillGrid").innerHTML = Object.entries(DATA.skills).map(([k,v]) => `<div clas
 $("contactText").textContent = DATA.contactText; $("mail").href = "mailto:" + DATA.email; $("mailText").textContent = DATA.email;
 $("socials").innerHTML = DATA.socials.map(([n,u]) => `<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join("");
 
+
+$("expList").innerHTML = DATA.experience.map(j => `<article class="job"><div class="when">${j.when}<br>${j.mode}<br><span class="live">Current</span></div><div><h3>${j.role}</h3><div class="org">${j.org}</div><ul>${j.points.map(x=>`<li>${x}</li>`).join("")}</ul><div class="tags">${j.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div></div></article>`).join("");
 
 const types = ["All", ...new Set(DATA.projects.map(p => p.type))];
 function renderProjects(f){
