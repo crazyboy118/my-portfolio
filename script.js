@@ -16,7 +16,7 @@ const DATA = {
     "Learning": ["Docker","Kubernetes"]
   },
   experience: [
-    {role:"Full Stack Web Developer Intern", org:"Ricoz Innovation (FirstRicoz Pvt. Ltd.)", when:"Nov 2026 – Mar 2027", mode:"Full-time · Remote",
+    {role:"Full Stack Web Developer Intern", org:"Ricoz Innovation (FirstRicoz Pvt. Ltd.)", when:"Nov 2026 – Mar 2027", mode:"Internship · Remote",
      points:["Building and shipping features across the front end and back end of company projects as part of a remote team.","Working with the MERN stack: React on the front end, Node.js and Express APIs, MongoDB for data.","Taking part in regular performance reviews and acting on feedback to raise code quality and meet timelines."],
      tags:["React","Node.js","Express","MongoDB","SQL","Git"]}
   ],
